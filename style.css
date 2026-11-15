@@ -1,0 +1,183 @@
+
+
+/* تنظیمات عمومی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #10172a,
+        #172554,
+        #312e81
+    );
+}
+
+/* قرارگیری دقیق در وسط صفحه */
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* باکس اصلی */
+.menu-box {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+    animation: showBox 0.8s ease;
+}
+
+/* عنوان */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #b8c5e8;
+    font-size: 13px;
+}
+
+/* چیدمان دکمه‌ها */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* دکمه‌ها */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px 20px;
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: #e2e8f0;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+/* شماره دکمه */
+.menu-btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    color: white;
+    font-size: 12px;
+
+    transition: all 0.3s ease;
+}
+
+/* افکت هاور */
+.menu-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: white;
+
+    transform: translateY(-5px);
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.menu-btn:hover span {
+    background: white;
+    color: #6366f1;
+    transform: rotate(-8deg);
+}
+
+/* فوتر */
+.footer {
+    text-align: center;
+    color: #8796bd;
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+/* انیمیشن ورود */
+@keyframes showBox {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* نمایش در موبایل */
+@media (max-width: 500px) {
+
+    .menu-box {
+        padding: 22px;
+    }
+
+    .header h2 {
+        font-size: 21px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .menu-btn {
+        padding: 14px 16px;
+    }
+}
+
+   
